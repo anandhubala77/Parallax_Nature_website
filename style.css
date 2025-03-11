@@ -93,6 +93,8 @@ nav ul li a:hover {
     transform: none !important;
     transform: translateY(50px);
     transition: opacity 1s ease-out, transform 1s ease-out;
+    
+
 }
 
 .description.visible {
@@ -160,6 +162,16 @@ footer {
 
 
 @media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+        font-size: 2em;
+        cursor: pointer;
+        color: white;
+        position: absolute;
+        right: 20px;
+        top: 10px;
+    }
     nav ul {
         display: none;
         flex-direction: column;
@@ -195,5 +207,9 @@ footer {
 
     .description p {
         font-size: 1em;
+    }
+    .description {
+        position: relative;
+        transition: none; 
     }
 }
