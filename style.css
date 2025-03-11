@@ -1,0 +1,199 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+    scroll-behavior: smooth;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent; 
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    top: 0;
+    z-index: 1000;
+    padding: 0 20px;
+    
+}
+
+.logo {
+    color: white;
+    font-size: 1.9em;
+    font-weight: bold;
+    margin-left: 25px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-right: 20px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f4a261;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+    color: white;
+}
+
+.parallax {
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .parallax {
+        background-attachment: scroll; 
+        scroll-behavior: smooth;
+        background-size: cover;
+        height: 80vh;
+    }
+}
+
+
+#home { background-image: url('./images/pexels-eberhardgross-640781.jpg'); }
+.forest { background-image: url('./images/pexels-haydan-as-soendawy-730525-2883460.jpg'); }
+.mountain { background-image: url('./images/pexels-juanico-12597254.jpg'); }
+.water { background-image: url('./images/water.jpg'); }
+
+.description {
+    max-width: 600px;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    opacity: 1 !important;
+    transform: none !important;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.description.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.description h2 {
+    font-size: 3em;
+    color: transparent;
+    -webkit-text-stroke: 0.7px white; 
+    
+}
+
+.description p {
+    font-size: 1.2em;
+}
+
+
+footer {
+    background: #222;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+   
+}
+
+.footer-form input {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 5px;
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+}
+
+.footer-form button {
+    padding: 10px 20px;
+    background: #f4a261;
+    border: none;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+}
+
+.footer-form button:hover {
+    background: #e76f51;
+}
+.social-media >a,i{
+    color: rgb(227, 233, 233);
+    padding: 10px;
+    width: 20px;
+    height: 15px;
+}
+/* Responsive Design */
+
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background: black;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        color: white;
+        
+    }
+
+    nav ul.active {
+        display: flex;
+       
+        background-color: transparent;
+       
+    }
+    nav>ul>li{
+        margin-top: 10px;
+
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-right: 20px;
+    }
+
+    .description h2 {
+        font-size: 2em;
+    }
+
+    .description p {
+        font-size: 1em;
+    }
+}
